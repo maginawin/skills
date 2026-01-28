@@ -10,7 +10,7 @@ description: 对比当前代码与最近一次 git tag 版本之间的功能差�
 1. 获取 git 最近一次的 tag 作为 `oldVersion`（示例：`1.0.0`）
 2. 获取用户传入的版本号作为 `newVersion`（示例：`1.0.1`）
 3. 分析 `oldVersion` 到当前代码（包括未提交的代码）之间的差异
-4. 总结功能更新，保存到 `./change_log/CHANGELOG_{oldVersion}_to_{newVersion}.md`
+4. 总结功能更新，保存到项目中的 `./change_log/CHANGELOG_{oldVersion}_to_{newVersion}.md` 文件中
 5. 报告执行结果
 
 ## 版本号处理规则

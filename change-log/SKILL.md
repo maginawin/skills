@@ -11,7 +11,13 @@ description: 对比当前代码与最近一次 git tag 版本之间的功能差�
 2. 获取用户传入的版本号作为 `newVersion`（示例：`1.0.1`）
 3. 分析 `oldVersion` 到当前代码（包括未提交的代码）之间的差异
 4. 总结功能更新，保存到项目中的 `./change_log/CHANGELOG_{oldVersion}_to_{newVersion}.md` 文件中
-5. 报告执行结果
+5. 如果当前项目是 git 项目，则完成以下命令：
+   1. git add .
+   2. git commit 
+   3. git tag `newVersion` 
+   4. git push 
+
+6. 报告执行结果
 
 ## 版本号处理规则
 

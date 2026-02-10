@@ -11,10 +11,9 @@ description: 执行 Git 提交并推送。当用户说"push"、"推送"、"提�
 2. 如果有未提交的更改：
    - 运行 `git add .` 添加所有更改
    - 运行 `git commit` 提交更改，提交信息应简洁描述本次更改内容
+     - 提交信息中**不要**包含 Claude 相关信息
+     - **不要**添加 Co-Authored-By 署名
+
 3. 运行 `git push` 推送到远程仓库
+   1. 如果有新 tag 则还要 `git push --tags`
 4. 报告执行结果
-
-## 注意事项
-
-- 提交信息中**不要**包含 Claude 相关信息
-- **不要**添加 Co-Authored-By 署名

@@ -64,7 +64,7 @@ find . -type f -not -path './.git/*' | head -100
 ### 输出格式
 
 ```markdown
-# 更新日志：v{oldVersion} → v{newVersion}
+# 更新日志：{oldVersion} → {newVersion}
 
 ## 概述
 （用 2-3 句话概括本次更新的核心内容）
@@ -107,12 +107,12 @@ find . -type f -not -path './.git/*' | head -100
 git add -A
 
 # 2. 提交（不包含 Claude 相关信息，不添加 Co-Authored-By）
-git commit -m "release: v{newVersion}
+git commit -m "release: {newVersion}
 
 {一句话概括主要更新}"
 
 # 3. 打 tag
-git tag v{newVersion}
+git tag {newVersion}
 
 # 4. 推送（仅在存在远程仓库时执行）
 git push
@@ -120,7 +120,7 @@ git push --tags
 ```
 
 **注意事项：**
-- commit message 使用 `release: v{newVersion}` 格式，正文为一句话概括
+- commit message 使用 `release: {newVersion}` 格式，正文为一句话概括
 - 不要在 commit 中包含 Claude、AI、Co-Authored-By 等信息
 - 如果没有远程仓库，跳过 push 步骤并告知用户
 - 如果 push 失败，告知用户错误信息，不要重试
@@ -129,5 +129,5 @@ git push --tags
 
 输出执行摘要：
 - ✅ Changelog 已生成：`{文件路径}`
-- ✅ 已提交并打 tag：`v{newVersion}`
+- ✅ 已提交并打 tag：`{newVersion}`
 - ✅ 已推送到远程 / ⚠️ 无远程仓库，需手动推送
